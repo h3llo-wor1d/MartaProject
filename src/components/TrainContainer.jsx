@@ -1,6 +1,4 @@
 import React, {useEffect, useState} from "react";
-import { Line } from "../core/types";
-import Column from "./Column";
 import TrainObject from "./TrainObject";
 
 export default function TrainContainer(props) {
@@ -13,7 +11,7 @@ export default function TrainContainer(props) {
             fetch("/marta")
             .then(response => response.json())
             .then(data => {
-                var out = [[], [], [], []]
+                let out = [];
                 setTimeout(() => {
                     for (var index in data) {
                         let d = data[index];
